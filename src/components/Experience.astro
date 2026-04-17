@@ -5,9 +5,9 @@ import Button from './ui/Button.astro';
 
 const experiences = [
   {
-    title: 'Mastère Architecte Web',
+    title: 'Mastère 2 Architecte Web',
     company: 'Digital School of Paris - Institut F2I',
-    period: 'BAC+5 : 2024 - Présent',
+    period: 'BAC+5 : 2025 - Présent',
     year: 2026,
     description: "Formation d’expertise en alternance orientée architecture web, développement full-stack et pilotage de projets digitaux. Acquisition de compétences en conception et déploiement d’applications complexes, en gestion d’équipes techniques et en stratégie de transformation digitale",
     technologies: [
@@ -21,11 +21,11 @@ const experiences = [
     type: 'education'
   },
   {
-    title: 'Développeur Full-Stack - Alternance',
-    company: 'Conseil Départemental du Val-de-Marne',
-    period: '2023 - Présent',
+    title: 'Master 1 en Concultant Développeur Fullstack',
+    company: 'Digital School of Paris - Institut F2I',
+    period: '2024 - 2025',
     year: 2023.5,
-    description: "Refonte complète d'applications web (backend et frontend), gestion et optimisation de bases de données, maintenance et évolution de solutions existantes. Conception et développement d'une extension VS Code pour améliorer la productivité de l'équipe",
+    description: "Développement de sites web et d’applications responsive, intégration et personnalisation de thèmes WordPress, optimisation du référencement naturel et création de designs modernes, ergonomiques et adaptés aux besoins des utilisateurs.",
     technologies: [
       "Full-Stack",
       "Base de données",
@@ -34,30 +34,30 @@ const experiences = [
       "Mise en production",
       "VS Code Extension",
     ],
-    type: 'work'
-  },
-  {
-    title: 'Licence Professionnelle - Métiers de l\'Informatique: Applications Web (Parcours DAW2I)',
-    company: 'Université d\'Evry Val d\'Essonne - Paris Saclay',
-    period: 'BAC+4 : 2023 - 2024',
-    year: 2023.2,
-    description: "Formation axée sur le développement avancé d’applications web et mobiles. Acquisition de compétences solides en modélisation de données, conception d’interfaces, développement client/serveur et intégration de services web. Mise en pratique à travers des projets tutorés orientés production et déploiement d’applications réelles",
-    technologies: [
-      "Full-Stack",
-      "Développement mobile",
-      "Modélisation",
-      "Intégration",
-      "CMS",
-      "SEO",
-    ],
     type: 'education'
   },
   {
+    title: 'Développeur Web ',
+    company: 'Royalty Company',
+    period: '2024 - 2025',
+    year: 2023.2,
+    description: "Pendant ce stage, j’ai contribué au développement et à l’optimisation de sites e-commerce sous WordPress et Shopify. Mes missions comprenaient la personnalisation de thèmes, l’intégration de pages produits, le développement de fonctionnalités adaptées aux besoins clients, ainsi que l’optimisation SEO et des performances techniques. J’ai aussi participé à la configuration d’emails professionnels, à la migration vers des domaines personnalisés et à l’analyse des performances avec Google Analytics.",
+    technologies: [
+      "Full-Stack",
+      "WordPress",
+      "Integration Produit",
+      "Google Analytics",
+      "CMS",
+      "SEO",
+    ],
+    type: 'work'
+  },
+  {
     title: 'Développeur Web - Stage',
-    company: 'RJ Web',
+    company: 'GHL plugins',
     period: '2023',
     year: 2023,
-    description: "Gestion et répertoriation des activités du quartier Lavalle. Développement d'un système de facilitation des inscriptions à des évènements locaux et création d'une newsletter pour améliorer la communication avec les résidents",
+    description: "Au cours de mon stage en développement web chez GHL Plugins, entreprise spécialisée dans les solutions digitales au Cameroun, j’ai contribué à la création et à l’amélioration de sites et applications web. Cette expérience m’a permis de consolider mes compétences techniques, de mieux comprendre les besoins clients et de participer à la mise en place de solutions web fonctionnelles, modernes et adaptées aux usages. J’y ai également développé mon sens de l’organisation, ma capacité d’adaptation et mon autonomie dans un cadre professionnel.",
     technologies: [
       "Développement Web",
       "Gestion de contenu",
@@ -68,28 +68,20 @@ const experiences = [
     type: 'work'
   },
   {
-    title: 'Développeur Web - Stage',
-    company: 'Crédit Agricole',
-    period: '2022',
+    title: 'Bac +2 Développer Web',
+    company: 'ICT University',
+    period: '2023',
     year: 2022,
-    description: "Pôle Achat Technologie Service : Création d'interface web, gestion de bases de données et développement de scripts d'automatisation pour optimiser les processus internes",
+    description: "Dans le cadre de mon Bac+2 en développement web à ICT University, au Cameroun, j’ai été formé à la création de sites web responsive, à la conception d’interfaces web et mobiles avec Figma, ainsi qu’au développement d’applications et de sites en Java. Cette formation m’a permis de construire une base technique solide en développement et en design d’interface, tout en renforçant ma capacité à concevoir des solutions adaptées aux besoins des utilisateurs.",
     technologies: [
       "Développement Web",
       "Base de données",
       "Scripting",
-      "Automatisation"
+      "Design "
     ],
-    type: 'work'
-  },
-  {
-    title: 'BTS Services Informatiques aux Organisations - Option SLAM',
-    company: 'Lycée Léonard de Vinci, Melun',
-    period: '2021 - 2023',
-    year: 2022.5,
-    description: 'Solutions Logicielles et Applications Métiers. Formation aux compétences en programmation, gestion de projet, sécurité informatique, gestion de données et cybersécurisation des solutions applicatives',
-    technologies: ['Programmation', 'Base de données', 'Sécurité', 'Collaboration', 'Développement web', "UML"],
     type: 'education'
-  }
+  },
+  
 ].sort((a, b) => b.year - a.year);
 ---
 
@@ -172,7 +164,7 @@ const experiences = [
   <!-- CTA pour télécharger le CV -->
   <div class="text-center mt-16 reveal">
     <a 
-      href="Curriculum_Vitae_TABAR_LABONNE_Baptiste.pdf" 
+      href="CV_Engongomo.pdf" 
       download
       class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-primary-500 to-primary-600 text-white font-semibold hover:shadow-xl hover:shadow-primary-500/30 transition-all duration-300 hover:scale-105"
     >

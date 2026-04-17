@@ -28,42 +28,64 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: 'alydousheure-fullstack',
-    title: 'Aly dous\'heure - Plateforme de réservation',
-    description: 'Plateforme web de réservation et de gestion pour une masseuse professionnelle. Système de prise de rendez-vous en ligne, paiement sécurisé, gestion des disponibilités, authentification utilisateur et tableau de bord statistiques pour le professionnel.',
-    image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&q=80',
-    technologies: ['NestJS', 'Next.js', 'Prisma', 'Supabase', 'Stripe Connect', 'Cloudinary', 'Resend', 'Vercel', 'Render', 'GitHub Actions', 'IONOS'],
-    github: 'https://github.com/TabarBaptiste/masseuse',
-    demo: 'https://alydousheure.fr/',
+    slug: 'ble-dor-fullstack',
+    title: 'Blé dor  - Plateforme de gestion pour boulangerie',
+    description: 'Blé Dor est une application web de gestion pour boulangerie permettant de gérer produits, commandes et utilisateurs avec des dashboards personnalisés selon les rôles (client, gérant, propriétaire).',
+    image: 'https://res.cloudinary.com/dlsgtpcaa/image/upload/v1776277820/Dachboard_bl%C3%A9_dor_ak3lt6.png',
+    technologies: ['go', 'Next.js', 'Prisma', 'Stripe Connect', 'Cloudinary',  'Vercel', 'Render', 'GitHub Actions', ],
+    github: 'https://github.com/Emma781227/Ble-dor',
+    demo: 'https://ble-dor-1.vercel.app/',
     demoLabel: 'Voir le site',
     category: 'web',
+     screenshots: [
+      { name: 'page d\'acceuil', path: '/projects/Acceuil_blé_dor.png' },
+      { name: 'Dashboard client', path: '/projects/Dashboard_client_blé_dor.png' },
+      { name: 'Dashboard gérant', path: '/projects/Dashboard_manager_blé_dor.png' },
+      { name: 'Page d\'inscription', path: '/projects/Inscription_Blé_dor.png' },
+    ],
     detailedContent: {
       introduction: 'Plateforme web **full-stack** développée pour digitaliser l\'activité d\'une masseuse professionnelle indépendante.\n\nLe projet couvre l\'ensemble du parcours client : de la découverte des prestations à la réservation en ligne, en passant par le paiement sécurisé et la gestion post-visite (avis clients).\n\nCôté professionnel, l\'application offre un **tableau de bord complet** pour gérer les réservations, visualiser les statistiques, administrer les prestations et paramétrer le site.\n\nL\'architecture est pensée pour être **performante, maintenable et évolutive**, avec une **séparation claire entre frontend et backend**, un **déploiement automatisé** et une **gestion rigoureuse des données sensibles**.',
       features: [
-        'Système de réservation intelligent :',
-        '  • Consultation des disponibilités en temps réel',
-        '  • Sélection de prestations et créneaux horaires',
-        '  • Gestion automatique des conflits et blocages',
-        '  • Validation et confirmation par email',
-        'Paiement sécurisé :',
-        '  • Intégration complète de Stripe Connect',
-        '  • Paiement en ligne lors de la réservation',
-        '  • Gestion des remboursements et annulations',
-        'Authentification et gestion utilisateur :',
-        '  • Inscription et connexion sécurisées',
-        '  • Vérification d\'email automatique',
-        '  • Gestion de profil et historique des réservations',
-        '  • Rôles utilisateur (client, professionnel, administrateur)',
-        'Système d\'avis clients :',
-        '  • Dépôt d\'avis après prestation',
-        '  • Affichage public des témoignages',
-        '  • Modération par le professionnel',
-        'Tableau de bord professionnel :',
-        '  • Vue d\'ensemble des réservations (passées, à venir, annulées)',
-        '  • Statistiques détaillées (revenus, prestations populaires, taux d\'occupation)',
-        '  • Gestion des créneaux et blocages de disponibilité',
-        '  • Administration des prestations et tarifs',
-        '  • Configuration des paramètres du site'
+         'Gestion des commandes en temps réel :',
+  '  • Création et suivi des commandes côté client',
+  '  • Mise à jour des statuts (en attente, préparation, prêt, livré)',
+  '  • Attribution automatique d’un numéro de ticket',
+  '  • Visualisation des commandes par rôle (client, manager, propriétaire)',
+
+  'Gestion du catalogue produits :',
+  '  • Ajout, modification et suppression de produits',
+  '  • Activation/désactivation selon disponibilité (stock)',
+  '  • Organisation par catégories (pain, viennoiserie, boissons, snacking)',
+  '  • Intégration d’images produits',
+
+  'Authentification et gestion des utilisateurs :',
+  '  • Inscription et connexion sécurisées',
+  '  • Gestion des rôles (CLIENT, MANAGER, OWNER)',
+  '  • Isolation des données par utilisateur (chaque client voit ses commandes)',
+  '  • Gestion des profils utilisateurs',
+
+  'Dashboard client :',
+  '  • Consultation des dernières commandes',
+  '  • Suivi des statuts en temps réel',
+  '  • Accès à l’historique des achats',
+  '  • Interface simple et intuitive',
+
+  'Dashboard manager :',
+  '  • Gestion des commandes du jour',
+  '  • Mise à jour des statuts en temps réel',
+  '  • Gestion du catalogue produits',
+  '  • Optimisation du flux en caisse',
+
+  'Dashboard propriétaire :',
+  '  • Vue globale des performances (CA, commandes, ticket moyen)',
+  '  • Analyse hebdomadaire et journalière',
+  '  • Gestion des managers (création, modification, suppression)',
+  '  • Suivi des produits les plus vendus',
+
+  'Architecture évolutive :',
+  '  • Conception pensée pour une future application mobile',
+  '  • API centralisée réutilisable (web + mobile)',
+  '  • Système prêt pour intégration de paiements (Mobile Money, Orange Money)'
       ],
       technical: [
         {
@@ -79,55 +101,49 @@ export const projects: Project[] = [
           ]
         },
         {
-          title: 'Backend – NestJS',
+          title: 'Backend – Next.js API Routes',
           items: [
-            'Architecture modulaire et scalable avec **NestJS**',
-            '**TypeScript** côté serveur pour une cohérence totale',
-            'API REST sécurisée avec validation des données via **class-validator**',
-            'Authentification JWT avec système de refresh tokens',
-            'Gestion fine des rôles et permissions (Guards)',
-            'Envoi d\'emails transactionnels automatisés',
-            'Gestion des conflits de réservation en temps réel',
-            'Logs structurés et gestion centralisée des erreurs'
+             'API REST intégrée via **App Router (route.ts)**',
+      'Architecture fullstack unifiée (frontend + backend)',
+      'Validation des données côté serveur',
+      'Gestion des rôles et sécurisation des accès',
+      'Gestion des erreurs centralisée'
           ]
         },
         {
-          title: 'Base de données – Prisma & Supabase',
+          title: 'Base de données – Prisma & PostgreSQL',
           items: [
-            '**Prisma** comme ORM pour une gestion type-safe de la base',
-            '**Supabase (PostgreSQL)** pour l\'hébergement de la base de données',
-            'Schéma relationnel complet (utilisateurs, réservations, prestations, avis, disponibilités)',
-            'Migrations versionnées pour la traçabilité',
-            'Indexation optimisée pour les requêtes fréquentes'
+             '**Prisma ORM** pour une gestion type-safe des données',
+      '**PostgreSQL** pour la persistance des données',
+      'Modélisation relationnelle (User, Order, Product, OrderItem)',
+      'Relations avancées (client ↔ commandes, manager ↔ commandes)',
+      'Migrations versionnées et évolutives'
           ]
         },
         {
-          title: 'Paiement – Stripe Connect',
+          title: ' Authentification',
           items: [
-            'Intégration complète de **Stripe Connect** en mode **Standard**',
-            'Onboarding du professionnel via Stripe',
-            'Création de sessions de paiement sécurisées',
-            'Gestion des webhooks pour la synchronisation des paiements',
-            'Remboursements automatiques en cas d\'annulation',
-            'Tableau de bord Stripe pour le suivi des transactions'
+            'Système basé sur session avec **getAuthSession()**',
+      'Gestion des rôles utilisateurs (CLIENT, MANAGER, OWNER)',
+      'Protection des routes côté serveur',
+      'Isolation des données par utilisateur'
           ]
         },
         {
           title: 'Services externes',
           items: [
-            '**Cloudinary** pour l\'hébergement et l\'optimisation des images',
-            '**Resend** pour l\'envoi d\'emails transactionnels et de notifications'
+             'Intégration prévue de **Mobile Money** et **Orange Money**',
+      'Possibilité d’ajouter Stripe ou autres solutions de paiement',
+      'Upload d’images via services externes (Cloudinary envisagé)'
           ]
         },
         {
           title: 'Déploiement et Infrastructure',
           items: [
-            '**Vercel** pour l\'hébergement du frontend (Next.js)',
-            '**Render** pour l\'hébergement du backend (NestJS)',
-            '**IONOS** pour la gestion du nom de domaine',
-            'Configuration SSL/TLS pour la sécurité',
-            'Variables d\'environnement sécurisées sur les deux plateformes',
-            'Séparation claire entre environnements de développement et production'
+             '**Vercel** pour l’hébergement du frontend et backend Next.js',
+      'Configuration des variables d’environnement',
+      'Optimisation des performances via SSR et caching',
+      'Architecture scalable pour montée en charge'
           ]
         },
         {
@@ -141,60 +157,63 @@ export const projects: Project[] = [
           ]
         }
       ],
-      workflow: 'Le projet suit un **workflow de développement moderne** :\n\n1. **Développement local** : Docker Compose pour orchestrer PostgreSQL, backend et frontend\n2. **Contrôle qualité** : GitHub Actions exécute les tests et validations à chaque push\n3. **Déploiement automatique** : merge sur `main` déclenche le déploiement sur Vercel (frontend) et Render (backend)\n4. **Monitoring** : surveillance des logs et des erreurs via les dashboards Vercel et Render\n\nCette approche garantit **fiabilité**, **traçabilité** et **déploiements rapides** tout en minimisant les risques d\'erreur.',
-      monitoring: 'Le projet intègre plusieurs couches de surveillance :\n\n• **Logs structurés** pour le débogage et l\'analyse\n• **Gestion centralisée des erreurs** côté backend\n• **Webhooks Stripe** pour tracer les événements de paiement\n• **Dashboards Vercel et Render** pour les métriques de performance\n• **Emails de notification** pour les événements critiques',
+      workflow: 'Le projet suit un workflow moderne :\n\n1. Développement local avec environnement Next.js et Prisma\n2. Gestion des versions avec Git et branches par fonctionnalités\n3. Tests manuels et validation des fonctionnalités (dashboard, commandes, produits)\n4. Build de production avec optimisation des performances\n5. Déploiement sur Vercel\n\nCette approche garantit une application stable, évolutive et maintenable.',
+      monitoring: 'Le projet inclut :\n\n• Gestion des erreurs côté serveur (API)\n• Logs Prisma pour le suivi des requêtes base de données\n• Validation des données pour éviter les incohérences\n• Suivi des performances via Vercel\n• Structure prête pour ajout d’outils de monitoring avancés',
       assets: {
         title: 'Architecture globale',
         items: [
-          '**Frontend (Vercel)** ↔ **API REST** ↔ **Backend (Render)** ↔ **Supabase (PostgreSQL)**',
-          '**Backend** ↔ **Stripe API** pour les paiements',
-          '**GitHub** → **Actions CI/CD** → **Déploiement automatique**'
+           '**Frontend (Next.js)** ↔ **API Routes** ↔ **Prisma ORM** ↔ **PostgreSQL**',
+    '**Client / Manager / Owner** → accès sécurisé selon rôle',
+    'Architecture pensée pour extension mobile (React Native / Expo)'
         ]
       }
     }
   },
   {
-    slug: 'dao-generator',
-    title: 'Extension VSCode - PHP DAO Generator',
-    description: 'Extension VSCode permettant de générer automatiquement des fichiers DAO PHP à partir des attributs d\'une table de base de données. Connexion au serveur via formulaire intégré, génération de code optimisée et monitoring avec Sentry. Disponible sur le marketplace VSCode.',
-    image: '/projects/logo.png',
-    technologies: ['TypeScript', 'CI/CD', 'Sentry', 'JavaScript', 'MCP', 'Base de données'],
-    github: 'https://github.com/TabarBaptiste/dao-generation',
-    demo: 'https://marketplace.visualstudio.com/items?itemName=Baptiste-TABAR-LABONNE.php-dao-generator',
+    slug: 'Biz manager',
+    title: 'Platforme de creation de boutique en ligne - Biz manager',
+    description: 'Plateforme de création de boutique en ligne permettant aux utilisateurs de créer et gérer leur propre boutique en ligne. Intégration de fonctionnalités de e-commerce avancées, gestion des stocks, et processus de paiement sécurisés.',
+    image: '/projects/Acceuil_biz.png',
+    technologies: ['Next.js', 'Prisma', 'PostgreSQL', 'CI/CD' , 'JavaScript', 'MCP', 'Base de données'],
+    github: 'https://github.com/Emma781227/BizManager',
+    demo: 'https://biz-manager-eta-umber.vercel.app/',
     demoLabel: 'Marketplace',
     category: 'web',
     screenshots: [
-      { name: 'Procesus de génération', path: '/projects/PHP_DAO_Generator-visual_selection.png' },
-      { name: 'Workflow CI/CD', path: '/projects/CI-CD-dao.svg' },
-      { name: 'Pipline et surveillance automatisés', path: '/projects/monitoring-black-dao.svg' },
-      { name: 'Pipline et surveillance automatisés', path: '/projects/monitoring-white-dao.svg' },
+      { name: 'Espace commerçant', path: '/projects/Dashboard_biz.png' },
     ],
     detailedContent: {
-      introduction: 'Ce projet a été développé à la demande de mon maître d’apprentissage au Conseil Départemental du Val-de-Marne.\n\n L’objectif était de simplifier et d’accélérer la création des objets DAO utilisés quotidiennement par l’équipe, en automatisant une tâche répétitive et source d’erreurs lorsqu’elle est réalisée manuellement.\n\n Les DAO (Data Access Objects) constituent un élément central de l’architecture PHP interne : ils assurent l’accès aux données stockées dans différents systèmes de gestion de base de données.\n\n L’extension permet aujourd’hui de générer ces fichiers en quelques secondes, tout en garantissant une structure cohérente et homogène.',
+      introduction: 'BizManager est une application web mobile-first conçue pour aider les petits commerçants à digitaliser la gestion de leur activité.\n\n Le projet répond à un besoin concret : centraliser la gestion d’une boutique, des produits, des commandes, des clients et des paiements dans un seul outil, tout en proposant une boutique publique simple d’accès pour les clients.\n\n L’application repose sur deux espaces distincts : un espace commerçant privé pour piloter l’activité, et un espace client public permettant de consulter les produits et commander facilement via WhatsApp.',
       features: [
-        'Connexion simple aux serveurs de bases de données via un formulaire intégré.',
-        'Exploration des bases, schémas et tables directement depuis la sidebar VSCode.',
-        'Génération automatique de fichiers DAO à partir de la structure des tables.',
-        'Deux modes de génération :',
-        '  • Sauvegarder : crée une sauvegarde dans backup/ avant d\'écraser.',
-        '  • Écraser : remplace directement les fichiers existants.',
-        'Monitoring intégré via Sentry pour remonter les erreurs des utilisateurs et améliorer la stabilité.'
+         'Espace commerçant sécurisé avec authentification, vérification email et réinitialisation du mot de passe.',
+    'Gestion complète de la boutique : informations, visuels, horaires et paramètres.',
+    'CRUD produits avec catégories, images, filtres et gestion du stock.',
+    'Gestion des clients et suivi des commandes avec statuts et paiements.',
+    'Dashboard commerçant avec indicateurs clés de performance.',
+    'Boutique publique accessible via un lien personnalisé.',
+    'Catalogue client avec recherche, filtres, fiche produit et checkout simplifié.',
+    'Commande client avec génération de message WhatsApp prérempli et référence de commande.',
+    'PWA installable sur mobile pour une expérience plus proche d’une application.'
       ],
       technical: [
         {
-          title: 'Développement',
-          items: ['Extension a été développée en **TypeScript**.',
-            'Architecture pensée pour être modulaire et facilement extensible.',
-            'Gestion d’erreurs renforcée grâce à **Sentry**.'
+          title: 'Stack',
+          items: ['**Next.js App Router**',
+        '**TypeScript**',
+        '**Prisma ORM**',
+        '**PostgreSQL**',
+        '**Vercel**',
+        '**Neon**'
           ]
         },
         {
-          title: 'CI/CD – Workflows GitHub Actions',
+          title: 'Ce que ce projet démontre',
           items: [
-            'Trois workflows assurent le contrôle qualité, la cohérence et la publication automatisée de l\'extension.',
-            '**1. Copilot Code Review** : Analyse automatique des fichiers modifiés dans une PR, résumé des changements (lignes ajoutées/supprimées), détection des `console.log` indésirables et publication d\'un commentaire automatique sur la PR avec les recommandations d\'amélioration. \n **But** : assurer une première passe de revue de code automatisée et pédagogique.',
-            '**2. PR Checks** : Composé de deux blocs \n **pr-lint** (valide le format du titre de la PR selon Conventional Commits et ajoute automatiquement un label `needs-review`) \n **code-quality** (installation et vérification du projet avec Node 22 + `npm ci`, exécution de `tsc --noEmit` pour assurer la validité des types TypeScript, ajout automatique d\'un commentaire si une erreur bloque la PR). \n **But** : garantir une base de code propre, typée et conforme avant chaque merge.',
-            '**3. Release** : Build automatique de l\'extension, packaging via `vsce`, possibilité de publier sur le VSCode Marketplace via un `workflow_dispatch` et exécution du script de release (semantic-release). \n **But** : uniformiser et fiabiliser les livraisons de version.'
+            'Conception d’une application full-stack orientée produit.',
+        'Mise en place d’une architecture claire avec séparation entre espace privé et espace public.',
+        'Gestion d’authentification, logique métier, multi-tenant et flux de commande.',
+        'Déploiement en production avec gestion de base de données distante et variables d’environnement.',
+        'Approche mobile-first et PWA pour une meilleure accessibilité sur smartphone.'
           ]
         },
         {
@@ -205,22 +224,21 @@ export const projects: Project[] = [
           ]
         },
         {
-          title: 'Monitoring',
-          items: ['J\'ai utilisé **Sentry** pour récupérer les erreurs utilisateurs pour de les résoudre au plus vite afin d\'éviter une mauvaise expérience utilisateur.']
+          title: 'Objectif produit',
+          items: ['Proposer un outil simple et concret pour des commerçants qui vendent déjà via WhatsApp, Instagram ou Facebook, mais qui ont besoin d’une solution plus structurée pour gérer leur activité.']
         }
       ]
     }
   },
   {
-    slug: 'beroli',
-    title: 'Beroli - Application mobile',
-    description: 'Application mobile Flutter développée pour optimiser la gestion des interventions terrain d\'une entreprise. Authentification sécurisée, synchronisation en temps réel avec Firebase et interface intuitive pour les techniciens.',
-    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80',
-    technologies: ['Flutter', 'Dart', 'Firebase'],
-    github: 'https://github.com/matbel91765/beroli',
-    demo: 'https://www.canva.com/design/DAF-QIOEFEw/H_RNdqkVg2smDcXOgbXX9w/edit',
-    demoLabel: 'Voir la présentation Canva',
-    category: 'mobile'
+    slug: 'Portfolio ',
+    title: 'Porfolio ',
+    description: ' Application mobile de portfolio personnel développée . Présentation des projets, compétences et expériences professionnelles à travers une interface moderne et intuitive.',
+    image: '/projects/pf.png',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel'],
+    github: 'https://github.com/Emma781227/PortFolioNKE',
+    demo: 'https://portfolio-nke-elomo.vercel.app/en',
+    category: 'web'
   },
   {
     slug: 'fuel',

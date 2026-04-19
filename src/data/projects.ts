@@ -231,218 +231,147 @@ export const projects: Project[] = [
     }
   },
   {
-    slug: 'Portfolio ',
-    title: 'Porfolio ',
-    description: ' Application mobile de portfolio personnel développée . Présentation des projets, compétences et expériences professionnelles à travers une interface moderne et intuitive.',
+    slug: 'portfolio-nke',
+    title: 'Portfolio professionnel - NKE Elomo',
+    description: 'Portfolio professionnel bilingue (FR/EN) conçu pour présenter mon profil d\'ingénieur civil, mes projets techniques et mes compétences en design structurel, BIM et exécution de plans.',
     image: '/projects/pf.png',
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel'],
-    github: 'https://github.com/Emma781227/PortFolioNKE',
+    technologies: ['Astro', 'TypeScript', 'Tailwind CSS', 'EmailJS', 'Vercel'],
+    github: 'https://github.com/Emma781227/PortFolio_Emmanuel',
     demo: 'https://portfolio-nke-elomo.vercel.app/en',
-    category: 'web'
-  },
-  {
-    slug: 'fuel',
-    title: 'Fuel',
-    description: 'Application web pour suivre les pleins d\'essence avec calculs automatiques des kilomètres parcourus, consommation et coûts. Inclut des statistiques en temps réel, visualisations graphiques, estimations de trajet, et interface moderne.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Next.js API Routes', 'PostgreSQL', 'Prisma'],
-    github: 'https://github.com/TabarBaptiste/fuel',
-    demo: 'https://fuel-nine.vercel.app/',
-    demoLabel: 'Voir l\'application',
+    demoLabel: 'Voir le portfolio',
     category: 'web',
     screenshots: [
-      { name: 'Tableau de bord', path: '/projects/fuel/tableau_bord.png' },
-      { name: 'Historique', path: '/projects/fuel/historique.png' },
-      { name: 'Résumé mensuel', path: '/projects/fuel/resume_mensuel.png' },
-      { name: 'Graphiques', path: '/projects/fuel/graphiques.png' }
+      { name: 'Accueil du portfolio', path: '/projects/pf.png' }
     ],
     detailedContent: {
-      introduction: 'Application web **full-stack** développée pour suivre et gérer efficacement les pleins d\'essence d\'un véhicule.\n\nPensée pour un usage personnel, elle offre une interface intuitive permettant d\'enregistrer chaque plein, de visualiser les statistiques de consommation et de coûts, avec des calculs automatiques des kilomètres parcourus et de la consommation moyenne.\n\nLe projet met l\'accent sur une **expérience utilisateur fluide**, des **visualisations graphiques claires** et une **persistance fiable des données**. L\'ensemble a été conçu pour être **performant**, **maintenable** et facilement **déployable**.',
+      introduction: 'Portfolio web développé pour valoriser un profil d\'ingénieur civil orienté **structure**, **BIM** et **dessin d\'exécution**.\n\nLe site met en avant le parcours, les compétences techniques et les réalisations, avec une navigation claire et une expérience visuelle moderne adaptée au desktop comme au mobile.',
       features: [
-        'Gestion des pleins :',
-        '  • Ajout et suppression de pleins d\'essence',
-        '  • Saisie des données (kilométrage, litres, prix)',
-        '  • Calcul automatique des kilomètres parcourus',
-        '  • Calcul automatique de la consommation (L/100km)',
-        '  • Calcul automatique des coûts totaux',
-        'Statistiques et visualisations :',
-        '  • Graphiques en temps réel des consommations',
-        '  • Évolution des coûts sur le temps',
-        '  • Moyennes et tendances',
-        '  • Cartes visuelles interactives',
-        'Estimations de trajet :',
-        '  • Calcul des litres estimés pour un trajet donné',
-        '  • Estimation du coût basé sur la consommation moyenne',
-        '  • Planification économique des déplacements',
-        'Authentification et sécurité :',
-        '  • Connexion sécurisée via code PIN',
-        '  • Protection des données personnelles',
+        'Présentation claire du profil professionnel et des domaines d\'expertise.',
+        'Section projets avec pages de détail et technologies associées.',
+        'Navigation bilingue (français/anglais).',
+        'Mise en avant du CV avec accès direct.',
+        'Formulaire de contact intégré via EmailJS.',
+        'Design responsive avec composants réutilisables.'
       ],
-      technical: [
-        {
-          title: 'Frontend – Next.js 14',
-          items: [
-            '**Next.js** avec App Router pour une navigation moderne',
-            '**React** pour la construction d\'interfaces dynamiques',
-            '**TypeScript** pour la sécurité des types',
-            '**Tailwind CSS** pour un design responsive et cohérent',
-            'Composants réutilisables et modulaires',
-            'Optimisation des performances et du SEO'
-          ]
-        },
-        {
-          title: 'Backend – Next.js API Routes',
-          items: [
-            '**API Routes** de **Next.js** pour les endpoints backend',
-            'Architecture RESTful pour les opérations CRUD',
-            'Validation des données côté serveur',
-            'Gestion des erreurs et logging'
-          ]
-        },
-        {
-          title: 'Base de données – Neon PostgreSQL & Prisma ORM',
-          items: [
-            '**Prisma ORM** pour une gestion type-safe de la base',
-            '**Neon PostgreSQL** pour l\'hébergement cloud de la base de données',
-            'Schéma relationnel pour les pleins et véhicules',
-            'Migrations automatisées et versionnées'
-          ]
-        },
-        {
-          title: 'Déploiement – Vercel',
-          items: [
-            'Déploiement automatique avec **Vercel** pour l\'hébergement full-stack (frontend + API)',
-            'Variables d\'environnement sécurisées',
-            'Monitoring des performances intégré'
-          ]
-        }
-      ],
-      workflow: 'Le projet suit un **workflow de développement simplifié** adapté à une application personnelle :\n\n1. **Développement local** : Next.js en mode développement avec base de données Neon\n2. **Contrôle qualité** : Vérifications TypeScript et tests manuels\n3. **Déploiement automatique** : Push sur GitHub déclenche le déploiement sur Vercel\n\nCette approche garantit **rapidité de développement** et **fiabilité du déploiement** pour un projet personnel.'
-    }
-  },
-  {
-    slug: 'recettes',
-    title: 'Recettes - Application de recettes',
-    description: 'Application web personnelle permettant de gérer, organiser et partager facilement mes recettes de cuisine.\n\n Elle centralise toutes mes préparations en un seul endroit et me permet d’ajouter, modifier ou supprimer des recettes en quelques secondes.',
-    image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80',
-    technologies: ['Angular', 'Express', 'Prisma', 'PostgreSQL', 'Tailwind CSS', 'Render', 'Netlify'],
-    github: 'https://github.com/TabarBaptiste/recettePerso',
-    demo: 'https://recette-perso.netlify.app/',
-    demoLabel: 'Voir le site',
-    category: 'web',
-    screenshots: [
-      { name: 'Détails Techniques', path: '/projects/Recettes_Details_techniques.png' },
-    ],
-    detailedContent: {
-      introduction: 'Application web **full-stack** permettant de créer, organiser et consulter mes recettes de cuisine.\n\n Pensée pour un usage personnel, elle offre un parcours simple et rapide : ajout, modification, suppression et consultation des recettes (**CRUD**) grâce à un accès sécurisé par **code PIN à quatre chiffres**.\n\nLe projet met l\'accent sur une **interface épurée**, une **structure claire** et une **logique backend fiable**. L\'ensemble a été conçu pour être facilement **maintenable**, **déployable** et **évolutif**, avec une gestion propre des données et un **hébergement découplé** entre le frontend et le backend',
       technical: [
         {
           title: 'Frontend',
-          items: ['Le frontend est conçu avec **Angular** pour sa structure claire et modulable, ainsi qu\'avec **Tailwind CSS**, qui facilite la création d\'une interface sobre et cohérente. L\'utilisation des **standalone components** permet une architecture plus légère et moderne.']
+          items: [
+            '**Astro** pour une architecture rapide et orientée contenu',
+            '**TypeScript** pour la robustesse du code',
+            '**Tailwind CSS** pour une interface moderne et responsive'
+          ]
         },
         {
-          title: 'Backend',
-          items: ['Le backend repose sur **Express**, choisi pour sa simplicité, sa performance et la flexibilité qu\'il offre dans la création d\'**API REST** robustes.']
-        },
-        {
-          title: 'ORM',
-          items: ['J\'ai utilisé **Prisma** pour sa rapidité de développement et la clarté de son schéma. Il facilite la gestion des migrations et assure une bonne lisibilité du modèle de données.']
-        },
-        {
-          title: 'Base de données',
-          items: ['La base de données est hébergée sur **NeonDB**, un service **PostgreSQL** moderne offrant une intégration simple, du stockage gratuit et un environnement scalable si besoin. Grâce à **Prisma**, une éventuelle migration vers un autre service resterait simple.']
-        },
-        {
-          title: 'Web services',
-          items: ['Le backend est déployé sur **Render**, connecté directement à **NeonDB**. Render permet un déploiement automatique via **GitHub** et une gestion intuitive des services.']
+          title: 'Contenu et UX',
+          items: [
+            'Structuration modulaire des sections (hero, compétences, expériences, projets)',
+            'Pages de détails générées par slug pour chaque projet',
+            'Parcours utilisateur optimisé pour le recrutement et la prise de contact'
+          ]
         },
         {
           title: 'Déploiement',
-          items: ['Le frontend est déployé sur **Netlify**, tandis que le backend est hébergé sur **Render**.\n\nCes deux solutions offrent une mise en ligne rapide, gratuite et parfaitement adaptée aux projets personnels.']
+          items: [
+            'Mise en ligne continue sur **Vercel**',
+            'Versioning via **GitHub** avec workflow de mise à jour simple'
+          ]
         }
       ]
     }
   },
   {
-    slug: 'alydousheure',
-    title: 'Aly dous\'heure - Site vitrine',
-    description: 'Site vitrine moderne pour une masseuse professionnelle. Système de réservation en ligne, catalogue complet des prestations, visualisation des disponibilités, formulaire de contact et géolocalisation. Interface responsive optimisée pour mobile et desktop.',
-    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80',
-    technologies: ['Astro', 'CI/CD', 'Tailwind CSS', 'JavaScript', 'Référencement SEO'],
-    github: 'https://github.com/TabarBaptiste/alydousheure_vitrine',
-    demo: 'https://aly-dousheure.netlify.app/',
-    demoLabel: 'Voir le site',
-    category: 'web',
-    detailedContent: {
-      introduction: 'Création d\'un site vitrine moderne pour une masseuse professionnelle indépendante.\n\nLe site présente les prestations, les disponibilités, les informations de contact ainsi qu\'une carte de localisation.\n\nL\'objectif était de proposer une interface claire, chaleureuse et mobile first.\n\nCe projet m\'a également permis de travailler sur un vrai besoin client en intégrant identité visuelle, optimisation du contenu et bonnes pratiques SEO.',
-      features: [
-        'Catalogue complet des prestations et tarifs',
-        'Visualisation des horaires et disponibilités',
-        'Liens directs vers appel téléphonique, WhatsApp et Instagram',
-        'Géolocalisation intégrée',
-        'Interface responsive (mobile-first)',
-        'Optimisation SEO pour la visibilité locale'
-      ],
-      technical: [
-        {
-          title: 'Technologies',
-          items: [
-            '**Astro** pour le rendu statique et la structure du site',
-            '**Tailwind CSS** pour le design et la mise en page',
-            '**Google Analytics** & **Google Search Console** pour le suivi du trafic et l\'optimisation',
-            '**@astrojs/sitemap** pour améliorer l\'indexation par les moteurs de recherche'
-          ]
-        }
-      ],
-      workflow: 'Un workflow **CI/CD GitHub Actions** est mis en place pour automatiser le process de build.\n\nÀ chaque push sur la branche `master`, le pipeline :\n\n1. Vérifie et récupère le dépôt\n2. Installe les dépendances\n3. Génère la version optimisée du site\n4. Produit un artefact prêt à être déployé\n\nCe système garantit un déploiement rapide, fiable et reproductible à chaque mise à jour du projet.'
-    }
-  },
-  {
-    slug: 'rjweb',
-    title: 'RjWeb - Plateforme communautaire',
-    description: 'Plateforme web développée durant mon stage pour centraliser les activités du quartier Lavalle. Inscription aux évènements, newsletter automatisée, gestion des participants et espace administrateur complet.',
-    image: '/projects/preview.png',
-    imageLight: '/projects/preview_white.png',
-    technologies: ['PHP', 'JavaScript', 'MySQL', 'HTML', 'CSS'],
-    github: 'https://github.com/TabarBaptiste/pyramide',
+    slug: 'Editrix',
+    title: 'Editrix - Co-monteur vidéo IA',
+    description: 'Landing page Astro/React pour un co-monteur vidéo IA destiné aux créateurs de contenu, freelances et agences. Le site présente le produit, ses bénéfices, ses offres et ses cas d’usage avec une identité dark premium et un hero immersif.',
+    image: '/projects/EdiHome.png',
+    technologies: ['Astro 5', 'React 19', 'Three.js', 'TypeScript', 'Tailwind CSS'],
+    github: 'https://github.com/Emma781227/Editrix',
     demo: null,
     category: 'web',
     screenshots: [
-      { name: 'Accueil', path: '/projects/utilisateur.png' },
-      { name: 'Connexion', path: '/projects/connexion.png' },
-      { name: 'Contact', path: '/projects/contact.png' },
-      { name: 'Inscription', path: '/projects/inscription.png' },
-      { name: 'Liste inscrits', path: '/projects/inscrit.png' },
-      { name: 'Profil', path: '/projects/profil.png' },
-      { name: 'À propos', path: '/projects/about.png' }
+      { name: 'Hero', path: '/projects/EdiHome.png' },
+      { name: 'Offres', path: '/projects/OffreEdi.png' },
+      { name: 'À propos', path: '/projects/AboutEdi .png' },
     ],
     detailedContent: {
-      introduction: 'Plateforme web réalisée durant mon stage de BTS pour centraliser et faciliter la gestion des activités du quartier Lavalle. \n\n Le site permettait aux habitants de s’inscrire aux évènements, de recevoir automatiquement les informations importantes par e-mail, et d’accéder à un espace personnel. \n\n Un espace administrateur complet permettait de gérer les évènements, les utilisateurs et les envois de newsletters.',
+      introduction: 'Editrix est une landing page marketing conçue pour présenter un co-monteur vidéo IA destiné aux créateurs de contenu, freelances et agences.\n\nLe projet met l\'accent sur une **expérience immersive** avec un hero WebGL, des effets de verre et une identité visuelle dark premium. L\'objectif est de valoriser le produit de manière claire et crédible, tout en gardant une structure marketing complète pensée pour convertir.\n\nLe site est entièrement en français et combine des pages de présentation, des offres détaillées, une FAQ interactive, un formulaire de contact et les pages légales nécessaires.',
       features: [
-        'Création de compte utilisateur, connexion, modification et suppression du compte.',
-        'Inscription et désinscription aux différents évènements.',
-        'Envoi automatique d’e-mails (confirmations, rappels, newsletters) avec **PHPMailer**.',
-        'Espace administrateur permettant :',
-        '  • de créer, modifier et supprimer les évènements,',
-        '  • de gérer les participants,',
-        '  • d’administrer les comptes utilisateurs.'
+        'Analyse automatique des rushs vidéo pour accélérer la sélection des passages utiles.',
+        'Génération de rough-cuts intelligents pour réduire le temps de montage.',
+        'Adaptation multi-formats pour YouTube, TikTok, Shorts et Reels.',
+        'Sous-titres et exports automatisés pour simplifier la livraison finale.',
+        'Offres structurées autour de Creator, Pro et Studio pour couvrir différents usages.',
+        'Pages de conversion complètes avec hero, bénéfices, FAQ et contact.',
+        'Interface pensée pour les créateurs, freelances et agences avec une direction visuelle premium.'
       ],
       technical: [
         {
-          title: 'Frontend',
-          items: ['Développé en **HTML**, **CSS**, **JavaScript**.', 'Interface simple et adaptée à un public non technique.']
+          title: 'Stack technique',
+          items: [
+            '**Astro 5** pour une architecture orientée contenu et performante',
+            '**React 19** pour les composants interactifs côté client',
+            '**Three.js** pour l\'effet visuel immersif du hero',
+            '**TypeScript** pour la sécurité des types',
+            '**Tailwind CSS** pour le style responsive et cohérent'
+          ]
         },
         {
-          title: 'Backend',
-          items: ['Développé en **PHP procédural** avec requêtes SQL directes.', 'Gestion de la base de données via **phpMyAdmin**.', 'Environnement local basé sur **WampServer**.']
+          title: 'Structure du site',
+          items: [
+            'Accueil avec présentation du produit, hero animé, vidéo promo et CTA.',
+            'À propos pour la vision, le positionnement et les engagements.',
+            'Fonctionnalités pour expliquer le fonctionnement et les gains apportés par l\'IA.',
+            'Pour qui pour les cas d\'usage créateurs, freelances et agences.',
+            'Produits et tarifs pour détailler les offres Creator, Pro et Studio.',
+            'FAQ avec recherche locale côté client.',
+            'Contact et pages légales pour une structure marketing complète.'
+          ]
         },
         {
-          title: 'Outils et bibliothèques',
-          items: ['**PHPMailer** pour l’envoi d’e-mails.', '**Sessions PHP** pour l’authentification.']
+          title: 'Fonctionnalités marquantes',
+          items: [
+            'Hero plein écran avec composant React LiquidEther et rendu WebGL.',
+            'Vidéo promo intégrée dans `public/vid/pub.mp4` avec lecture pilotée par Intersection Observer.',
+            'Fiches produits dynamiques via la route `src/pages/products/[id].astro`.',
+            'Recherche instantanée dans la FAQ côté client.',
+            'Navigation déjà structurée entre les pages marketing et les sections de conversion.'
+          ]
+        },
+        {
+          title: 'Installation et exécution',
+          items: [
+            '`npm install` pour installer les dépendances.',
+            '`npm run dev` pour lancer le projet en local.',
+            '`npm run build` pour générer la version de production.',
+            '`npm run preview` pour prévisualiser le build localement.'
+          ]
+        },
+        {
+          title: 'Déploiement',
+          items: [
+            'Le projet est prêt pour un déploiement sur Vercel.',
+            'La structure des pages permet une publication simple et maintenable.',
+            'Le site est pensé pour être proprement affiché sur desktop et mobile.'
+          ]
         }
-      ]
+      ],
+      workflow: 'Le projet suit un workflow simple et efficace :\n\n1. Développement des pages marketing et des composants React.\n2. Intégration du hero WebGL, des effets visuels et de la vidéo promo.\n3. Validation du rendu responsive sur desktop et mobile.\n4. Build de production puis déploiement sur la plateforme cible.\n\nCette approche garantit une landing page rapide, immersive et facile à maintenir.',
+      assets: {
+        title: 'Arborescence utile',
+        items: [
+          'public/vid/ pour la vidéo promo.',
+          'src/components/ pour les blocs marketing et le hero immersif.',
+          'src/pages/products/ pour les fiches produits dynamiques.',
+          'src/pages/faq/ pour la recherche locale des questions fréquentes.',
+          'src/pages/legal/ pour les mentions légales et documents associés.'
+        ]
+      }
     }
-  }
+  },
+ 
+  
+ 
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {
